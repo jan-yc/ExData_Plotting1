@@ -13,7 +13,7 @@ power1$Date_time <- dmy_hms(power1$Date_time)
 
 # plot 3: three line plots - Sub_metering_1 (y, black); Sub_metering_2 (y, red);
 # Sub_metering_3 (y, blue) against Date_time (x)
-png("plot3.png")
+png("plot3.png") # default values for width and height in png are 480px
 with(power1, {
       plot(Date_time, Sub_metering_1, type="l", xlab="", 
                   ylab="Energy sub metering")

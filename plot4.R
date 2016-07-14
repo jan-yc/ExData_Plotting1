@@ -12,7 +12,7 @@ power1 <- unite(power, Date_time, Date, Time, sep = " ")
 power1$Date_time <- dmy_hms(power1$Date_time)
 
 # plot 4: 2x2 array of plots
-png("plot4.png")
+png("plot4.png") # default values for width and height in png are 480px
 par(mfrow = c(2,2))
 
 # topleft plot: line plot of Global_active_power (y) against Date_time (x)

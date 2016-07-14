@@ -21,7 +21,7 @@ power <- read.table("household_power_consumption.txt", sep=";", stringsAsFactors
 # Use sum(!complete.cases(power)) to check the number of rows with missing values
 
 # plot1: histogram of global active power, red in color
-png("plot1.png")
+png("plot1.png") # default values for width and height in png are 480px
 hist(power$Global_active_power, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
 dev.off()
