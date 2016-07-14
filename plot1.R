@@ -16,6 +16,7 @@ powernames <- unlist(strsplit(firstrow, ";")); rm(firstrow)
 power <- read.table("household_power_consumption.txt", sep=";", stringsAsFactors = FALSE, 
                     col.names = powernames, skip = 66637, nrows = 2880, na.strings = "?")
 
+# This table starts at 01/02/2007 0000hrs and ends at 02/02/2007 2359hrs
 # Use head(power) and tail(power) to confirm the range of data is correct
 # Use sum(!complete.cases(power)) to check the number of rows with missing values
 
