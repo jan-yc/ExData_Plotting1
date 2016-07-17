@@ -1,3 +1,13 @@
+# checks if the power consumption data is in the working directory
+# if not, downloads the zip file and extracts it
+if(!file.exists("household_power_consumption.txt")){
+      url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+      download.file(url, destfile="household_power_consumption.zip")
+      dldate <- Sys.Date()
+      save(url, dldate, file = "download.RData")
+      unzip("household_power_consumption.zip")
+}
+
 # Read the first/header row of the file as a character object
 firstrow <- readLines("household_power_consumption.txt", n=1)
 
